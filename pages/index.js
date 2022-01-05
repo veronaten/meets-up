@@ -25,13 +25,27 @@ function HomePage(props) {
   )
 };
 
-export async function getStaticProps() {
-  //fetching data from API
+export async function getServerSideProps(context) {
+
+  const req = context.req;
+  const res = context.res;
+  
+  // fetch any data from API
   return {
     props: {
       meetups: DUMMY_DATA
     }
   }
-};
+}
+
+// export async function getStaticProps() {
+//   //fetching data from API
+//   return {
+//     props: {
+//       meetups: DUMMY_DATA
+//     },
+//     revalidate: 10
+//   }
+// };
 
 export default HomePage;
