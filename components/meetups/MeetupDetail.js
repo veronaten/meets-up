@@ -8,7 +8,7 @@ function MeetupDetail(props) {
         alt={props.title}
       />
       <h1>{props.title}</h1>
-      <adress>{props.adress}</adress>
+      <adress>{props.address}</adress>
       <p>{props.description}</p>
     </section>
   )
